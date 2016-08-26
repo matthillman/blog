@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1.title Hello World
+  ul
+    - for post in contentful.posts
+      li
+        a(href='/blog/#{post.slug}')= post.title

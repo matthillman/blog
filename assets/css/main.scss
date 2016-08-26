@@ -1,0 +1,42 @@
+$darkColor: #222222;
+$mediumDark: #888888;
+$mediumLight: #cccccc;
+$brightColor: #eeeeee;
+
+html {
+    background: $darkColor;
+    color: $brightColor;
+
+    &.main {
+        background: url(/img/IMG_1911@2x.jpg) no-repeat center fixed;
+        background-size: cover;
+    }
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    font-family: hedley-new-web;
+}
+
+h1.title {
+    font-family: "Futura-CondensedMedium", Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    transform: scale(1.2, 1);
+    color: $brightColor;
+
+    .main & {
+        color: $darkColor;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $darkColor;
+
+    &:hover {
+        color: $mediumLight;
+    }
+}

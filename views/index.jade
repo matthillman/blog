@@ -1,6 +1,13 @@
-extends layout
+doctype html
+doctype html
+html.main
+    include ./includes/_head.jade
+    body
+        h1.title Matthew Hillman
+        ul
+            li
+                a(href='https://matt.hillman.pictures') Pictures
+            li
+                a(href='/blog') Blog
 
-block content
-  h3 Welcome to roots!
-  :markdown
-    Find tutorials and documentation at http://roots.cx : )
+    script(src='/js/main.js')
