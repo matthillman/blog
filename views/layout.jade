@@ -2,6 +2,9 @@ doctype html
 html
     include ./includes/_head.jade
     body
-        block content
+        div.container
+            include ./includes/_nav.jade
+            main
+                block content
 
         script(src='/js/main.js')

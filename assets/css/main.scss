@@ -3,9 +3,39 @@ $mediumDark: #888888;
 $mediumLight: #cccccc;
 $brightColor: #eeeeee;
 
+@import "preamble";
+
+@mixin title-text {
+    font: {
+        family: ftnk;
+        weight: 700;
+        size: 24px;
+    }
+    text: {
+        transform: uppercase;
+        align: center;
+    }
+    color: $brightColor;
+}
+@mixin nav-text {
+    font: {
+        family: ftnk;
+        weight: 400;
+        size: 16px;
+    }
+    text: {
+        align: center;
+    }
+    color: $mediumDark;
+    line-height: 20px;
+}
+
 html {
     background: $darkColor;
     color: $brightColor;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: hedley-new-web;
 
     &.main {
         background: url(/img/IMG_1911@2x.jpg) no-repeat center fixed;
@@ -13,19 +43,8 @@ html {
     }
 }
 
-body {
-    text-rendering: optimizeLegibility;
-    font-family: hedley-new-web;
-}
-
 h1.title {
-    font-family: "Futura-CondensedMedium", Helvetica, sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    text-transform: uppercase;
-    text-align: center;
-    transform: scale(1.2, 1);
-    color: $brightColor;
+    @include title-text;
 
     .main & {
         color: $darkColor;
@@ -33,10 +52,32 @@ h1.title {
 }
 
 a {
-    text-decoration: none;
-    color: $darkColor;
+    color: $brightColor;
 
     &:hover {
-        color: $mediumLight;
+        color: $mediumDark;
     }
+
+    .main & {
+        color: $darkColor;
+
+        &:hover {
+            color: $mediumLight;
+        }
+    }
+}
+
+div.container {
+    float: none;
+    margin: 0 auto;
+    max-width: 1400px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+
+    @import "content";
+    @import "nav";
 }

@@ -1,0 +1,56 @@
+@font-face {
+    font-family:ftnk;
+    src: url(https://fonts.typekit.net/af/8a5494/000000000000000000013365/27/d?subset_id=2&fvd=n4) format("woff");font-weight:400;font-style:normal;}@font-face{font-family:ftnk;src:url(https://fonts.typekit.net/af/9749f0/00000000000000000001008f/27/d?subset_id=2&fvd=n5) format("woff");font-weight:500;
+    font-style:normal;
+}
+@font-face{
+    font-family:ftnk;
+    src:url(https://fonts.typekit.net/af/90cf9f/000000000000000000010091/27/d?subset_id=2&fvd=n7) format("woff");font-weight:700;font-style:normal;}@font-face{font-family:gmsj;src:url(https://fonts.typekit.net/af/f5b9fe/000000000000000000012b3d/27/d?subset_id=2&fvd=n4) format("woff");font-weight:400;
+    font-style:normal;
+}
+@font-face{
+    font-family:gmsj;
+    src:url(https://fonts.typekit.net/af/027749/000000000000000000012b41/27/d?subset_id=2&fvd=n7) format("woff");font-weight:700;font-style:normal;
+}
+
+html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style-type: none;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+
+    &:active, &:focus, &:hover {
+        outline: 0;
+    }
+}

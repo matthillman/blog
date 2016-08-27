@@ -1,0 +1,91 @@
+nav {
+    order: 2;
+    width: 25%;
+
+    header {
+        .wrap {
+            width: 80%;
+            margin: 0 auto;
+            padding: 50px 0;
+
+            h1 {
+                line-height: 10px;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    .links {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+
+        > ul {
+            padding-bottom: 40px;
+
+            > li {
+                text-align: center;
+                & + li {
+                    padding-top: 10px;
+                }
+                > a {
+                    transition: color 0.2s ease;
+                    @include nav-text;
+                    line-height: 14px;
+
+                    &:hover {
+                        color: $brightColor;
+                    }
+                }
+
+                &:first-of-type {
+                    & + li {
+                        padding-top: 20px;
+                    }
+                    > a {
+                        @include title-text;
+                        font-size: 14px;
+                        font-style: normal;
+
+                        &:hover {
+                            color: $mediumDark;
+                        }
+                    }
+                }
+            }
+        }
+
+        div.social.nav-social {
+            font-size: 0;
+            text-align: center;
+
+            ul > li {
+                padding: 0 15px 15px 0;
+                display: inline-block;
+
+                &:last-of-type {
+                    padding-right: 0;
+                }
+
+                a {
+                    display: block;
+                    text-align: center;
+
+                    svg {
+                        transition: fill 0.2s ease;
+                        fill: $mediumDark;
+                        opacity: 1;
+                        width: 30px;
+                        height: 100%;
+                        vertical-align: middle;
+                    }
+
+                    &:hover svg {
+                        fill: $brightColor;
+                    }
+                }
+            }
+        }
+    }
+}
